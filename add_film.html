@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- Author: Anthony, Malachi, Sami
+Date: 11/11/2023
+File: Homework8
+Purpose: Homework #8
+-->
+
+<html>
+	<head>
+		<title> add_film.html </title>
+	</head>
+	<body style="background-color: gray;">
+		<center><h1>Add Film Control Panel</h1></center>
+		<center><h2>Add New Film</h2></center>
+		<center><h4>Hover over textbox to input format.</h4></center>
+		<center><a href="manager.html"> Return to Manager Homepage.</a></center>
+		<br>
+		<!--Add_film Data-->
+		<form action="add_film.php" method="post">
+		<!--Film Title-->
+        <label for="title">Film Title:</label>
+        <input type="text" id="title" name="title" placeholder="Ex. Film Title" required title="Enter valid film name. Ex. 'The Movie'">
+		<br>
+		<br>
+		<!--Film Description-->
+        <label for="description">Film Description:</label>
+        <textarea id="description" name="description" rows="1" placeholder="Ex. A description." required title="Enter valid film description. Ex. 'The Movie is about a movie.'"></textarea>
+		<br>
+		<br>
+		<!--Film Release Year-->
+        <label for="release_year">Film Release Year:</label>
+        <input type="number" id="release_year" name="release_year" placeholder="Ex. 2002" pattern="\d+" required title="Enter valid film release year. Ex. '2002'">
+		<br>
+		<br>
+		<!--Film Language ID-->
+        <label for="language_id">Film Language ID:</label>
+        <input type="number" id="language_id" name="language_id" placeholder="Ex. 1,2,3,4,5,6" pattern="\d+" required title="Enter valid film language ID. Ex. 'Languages: English(1), Italian(2), Japanese(3), Mandarin(4), French(5), Spanish(6)'">
+		<br>
+		<br>
+		<!--Film Rental Duration-->
+        <label for="rental_duration">Film Rental Duration:</label>
+        <input type="number" id="rental_duration" name="rental_duration" placeholder="Ex. 6" pattern="\d+" required title="Enter valid film rental duration. Ex. '1'">
+		<br>
+		<br>
+		<!--Film Rental Rate-->
+        <label for="rental_rate">Film Rental Rate:</label>
+        <input type="number" step="0.01" id="rental_rate" name="rental_rate" placeholder="Ex. 4.99" pattern="\d+(\.\d{2})?" required title="Enter valid rental rate in $0.00. Ex. '4.99'">
+		<br>
+		<br>
+		<!--Film Length-->
+        <label for="length">Film Length:</label>
+        <input type="number" id="length" name="length" pattern="\d+" placeholder="Ex. 60" required title="Enter valid film length in mins. Ex. '60'">
+		<br>
+		<br>
+		<!--Film Replacement Cost-->
+        <label for="replacement_cost">Film Replacement Cost:</label>
+        <input type="number" step="0.01" id="replacement_cost" name="replacement_cost" placeholder="Ex. 20.99" pattern="\d+(\.\d{2})?" required title="Enter valid film replacement cost in $0.00. Ex. '20.99'">
+		<br>
+		<br>
+		<!--Film Rating-->
+        <label for="rating">Film Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+            <option value="NC-17">NC-17</option>
+        </select>
+		<br>
+		<br>
+		<!--Film Special Features-->
+        <label for="special_features">Film Special Features:</label>
+        <select id="special_features" name="special_features" multiple required>
+            <option value="Trailers">Trailers</option>
+            <option value="Commentaries">Commentaries</option>
+            <option value="Deleted Scenes">Deleted Scenes</option>
+            <option value="Behind the Scenes">Behind the Scenes</option>
+        </select>
+		<br>
+		<br>
+        <button type="submit">Save</button>
+		<button onclick="window.location.href='manager.html'" type="button">Cancel</button>
+	</body>
+</html>
